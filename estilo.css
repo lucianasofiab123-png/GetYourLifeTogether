@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --jordy-blue: #91C4F2;
+  --vista-blue: #8CA0D7;
+  --african-violet: #9D79BC;
+  --purpureus: #A14DA0;
+  --mardi-gras: #7E1F86;
+  --soft-mint: #BFE5CF;
+  --sun-banana: #F6E7B3;
+  --footer-glass: #fafdffcc;
+  --dark-text: #1e1934;
+  --footer-dark: #3c2155;
+  --footer-accent: #46e9d0;
+  --glass-shadow: 0 9px 38px 0 rgba(126,31,134,0.14), 0 2px 16px 0 rgba(145,196,242,0.24);
+}
+
+/* Fondo con doble gradiente */
+body {
+  font-family: "Poppins", "Atkinson Hyperlegible", Arial, sans-serif;
+  margin: 0;
+  background:
+    linear-gradient(126deg, var(--jordy-blue), var(--soft-mint) 78%, var(--african-violet) 99%),
+    linear-gradient(233deg, #fff8, transparent 83%);
+  min-height: 100vh;
+  color: var(--dark-text);
+  letter-spacing: 0.01em;
+}
+
+/* Menú mejor contraste glass */
+nav {
+  backdrop-filter: blur(18px) saturate(170%);
+  -webkit-backdrop-filter: blur(18px) saturate(170%);
+  background: linear-gradient(90deg, #fff 60%, var(--vista-blue) 100%);
+  border-radius: 26px;
+  margin: 30px auto 38px auto;
+  padding: 0 42px;
+  box-shadow: 0 6px 24px #7e1f8627, 0 2px 8px #1e193477;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  width: 90vw;
+  max-width: 1020px;
+  border: 2.5px solid var(--purpureus);
+}
+
+nav ul {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  font-family: 'Poppins', 'Atkinson Hyperlegible', Arial, sans-serif;
+  color: var(--mardi-gras);
+  text-decoration: none;
+  font-size: 1.16rem;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  padding: 5px 8px 3.5px 8px;
+  border-radius: 30px;
+  transition: background 0.12s, color 0.15s, box-shadow 0.17s;
+  outline: none;
+  border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #fff;
+  background: linear-gradient(90deg, var(--purpureus) 67%, var(--mardi-gras) 100%);
+  box-shadow: 0 2px 10px #9d79bc33;
+  border-bottom: 2px solid var(--purpureus);
+}
+
+/* Main ajustado con shadow más fuerte */
+main {
+  max-width: 980px;
+  margin: 0 auto 60px auto;
+  background: linear-gradient(185deg, var(--footer-glass) 97%, #c7aede26 100%);
+  border-radius: 30px;
+  box-shadow: 0 13px 48px #7e1f8620, 0 2px 16px #a14da099;
+  padding: 48px 52px 42px 52px;
+  color: var(--dark-text);
+  line-height: 1.81;
+  border: 1.5px solid var(--vista-blue);
+  position: relative;
+  z-index: 1;
+}
+
+/* Título muy destacado */
+main h1 {
+  background: linear-gradient(88deg, var(--footer-dark) 17%, var(--purpureus) 61%, var(--jordy-blue) 97%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.33rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  letter-spacing: 0.052em;
+}
+
+
+/* Tarjetas/tareas bien nítidas */
+.section-tasks, .card {
+  background: linear-gradient(92deg, var(--soft-mint) 54%, var(--jordy-blue) 100%);
+  border-radius: 30px;
+  box-shadow: 0 3px 18px #a14da022;
+  margin: 23px 0;
+  padding: 19px 27px 21px 27px;
+  color: #1e1934;
+  font-family: "Atkinson Hyperlegible", "Poppins", Arial, sans-serif;
+  font-size: 1.13rem;
+  border: 1.5px solid #8ca0d7cc;
+}
+
+/* Botones con sombra violeta más contraste */
+button, .btn-action {
+  background: linear-gradient(94deg, var(--sun-banana) 38%, var(--soft-mint) 97%);
+  color: var(--mardi-gras);
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  padding: 13px 33px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 3px 17px #7e1f8641;
+  font-size: 1.16rem;
+  transition: box-shadow 0.11s, background 0.13s, color 0.15s;
+  outline: none;
+}
+
+button:hover, .btn-action:hover {
+    background: linear-gradient(94deg, var(--mardi-gras) 58%, var(--purpureus) 100%);
+  color: #fff;
+  box-shadow: 0 6px 26px #7e1f8665;
+  border-radius: 30px;
+}
+
+/* Footer profesional, info contacto */
+footer {
+  background: linear-gradient(95deg, var(--footer-dark) 30%, var(--purpureus) 50%, var(--footer-accent) 135%);
+  color: #fff;
+  text-align: center;
+  padding: 12px 6px 9px 12px;
+  font-size: 1.17rem;
+  font-family: "Poppins", "Atkinson Hyperlegible", Arial, sans-serif;
+  font-weight: 700;
+  border-top: 7px solid var(--purpureus);
+  box-shadow: 0 -6px 28px #8ca0d748, 0 12px 45px #211f2a18 inset;
+  border-radius: 32px 32px 0 0;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+ letter-spacing: 0.045em;
+}
+
+
+.btn-limite {
+  background: linear-gradient(94deg, var(--sun-banana) 38%, var(--mint) 97%);
+  color: var(--mardi-gras);
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  padding: 13px 33px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 3px 17px #7e1f8641;
+  font-size: 1.16rem;
+  letter-spacing: 0.045em;
+  transition: box-shadow 0.11s, background 0.13s, color 0.15s;
+  outline: none;
+}
+
+.btn-limite:hover, .btn-limite:focus {
+  background: linear-gradient(94deg, var(--mardi-gras) 58%, var(--purpureus) 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 26px #7e1f8665;
+  border-radius: 30px;
+}
+
+input[type="radio"] {
+  accent-color: var(--mardi-gras);
+}
+
+.a{
+   font-weight: 550;
+}
+
+h3{
+  color: var(--footer-dark);
+  background-clip: text;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.00rem;
+  font-weight: 700;
+  margin-bottom: 0px;
+  letter-spacing: 0em;
+  margin-top: 0px;
+}
+
+.eee{
+  color: var(--mardi-gras);
+  background-clip: text;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 3.33rem;
+  font-weight: 900;
+  margin-bottom: 0px;
+  letter-spacing: 0em;
+}
+
+.place{
+  border-radius: 30px;
+   color: var( --dark-text);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 3px 17px #7e1f8641;
+  font-size: 1.00rem;
+  transition: box-shadow 0.11s, background 0.13s, color 0.15s;
+  outline: none;
+}
+
+.calendario{
+  border-radius: 80px;
+   color: var( --dark-text);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 3px 17px #7e1f8641;
+  font-size: 1.00rem;
+  transition: box-shadow 0.11s, background 0.13s, color 0.15s;
+  outline: none;
+}
+
+h5{ 
+background-clip: text;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.50rem;
+  font-weight: 700;
+  margin-bottom: 0px;
+  letter-spacing: 0em;
+  margin-top: 0px;
+  color: white;
+}

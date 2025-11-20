@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Esqueleto página</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+
+<header>
+<nav>
+        <ul>
+            <li><a href="#">Agenda <i class="fa-jelly fa-regular fa-calendar"></i></a></li>
+            <li><a href="#">Recordatorios <i class="fa-solid fa-list"></i></a></li>
+            <li><a href="#">Chat con IA <i class="fa-jelly fa-regular fa-comment-dots"></i></a></li>
+        </ul>
+    </nav>
+</header>
+    
+
+    <main>
+       
+        <h2 class="eee">Recordatorios:</h2>
+        <div>
+            <form>
+                <table>
+                    <h3>Añadir Recordatorios:</h3>
+                    <tr>
+                        <td class="a">Recordatorio</td>
+                        <td><input class="place" type="text" name="name" placeholder="Recordatorio"></td>
+                    </tr>
+                    <tr>
+                        <td class="a">Dificulad</td >
+                        <td>
+                            <input type="radio" name="Dificultadad" id="facil">Facil
+                            <input type="radio" name="Dificultadad" id="mediano">Mediano
+                            <input type="radio" name="Dificultadad" id="dificil">Dificil
+                        </td>
+                        <tr>
+      <td class="a"><label for="fecha-limite">Fecha límite:</label></td>
+      <td><input class="calendario" type="date" id="fecha-limite" name="fecha-limite" required></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="submit" class="btn-limite">Guardar</button>
+      </td>
+    </tr>
+
+                </table>
+            </form>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <h5 class="a1">About us</h5>
+        <h6 class="infoo">contacto        nuestra historia        membresias</h6>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

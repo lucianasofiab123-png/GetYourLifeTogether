@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Gemini demo</title></head>
+<body>
+  <h1>Chat con Gemini</h1>
+  <textarea id="prompt" rows="4" cols="50">Escribe aquí tu pregunta...</textarea><br>
+  <button id="send">Enviar</button>
+  <pre id="respuesta"></pre>
+
+  <script>
+    document.getElementById('send').onclick = async () => {
+      const prompt = document.getElementById('prompt').value;
+      const res = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt })
+      });
+      const data = await res.json();
+      document.getElementById('respuesta').textContent = data.text ?? JSON.stringify(data);
+    };
+  </script>
+</body>
+</html>
